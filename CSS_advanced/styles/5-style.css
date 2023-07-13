@@ -6,7 +6,7 @@ html {
 body {
     font-family: var(--font-family-base);
     color: var(--text-color);
-    size: var(--font-size-medium);
+    font-size: var(--font-size-medium);
 }
 
 a {
