@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--footer-padding);
 }
 
-.navbarmenu {
+.navbar-menu {
     float: right;
 }
 
@@ -153,7 +153,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav .nav-link {
     display: block;
-    padding: 0.5rem 1rem;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .nav .nav-link:hover {
