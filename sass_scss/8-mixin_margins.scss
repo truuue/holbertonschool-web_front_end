@@ -1,0 +1,13 @@
+/* Sass file that assigns margin */
+$small-margin: 10px;
+$big-margin: 15px;
+
+@mixin body {
+    margin-left: $small-margin;
+    margin-right: $small-margin;
+}
+
+@mixin div {
+    margin-left: $big-margin;
+    margin-right: $big-margin;
+}
