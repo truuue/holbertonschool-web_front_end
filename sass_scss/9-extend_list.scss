@@ -1,18 +1,18 @@
 /* Sass file that assigns font size and text color */
-$font-size: 12px;
-$first-color: #00ff00;
-$second-color: #ff0000;
+$size: 12px;
+$first-text-color: #ff0000;
+$second-text-color: #00ff00;
 
 .info {
-    font-size: $font-size;
+    font-size: $size;
 }
 
 .success {
-    color: $first-color;
     @extend .info;
+    color: $second-text-color;
 }
 
 .warning {
-    color: $second-color;
     @extend .info;
+    color: $first-text-color;
 }
