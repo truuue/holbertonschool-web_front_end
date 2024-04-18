@@ -2,14 +2,17 @@
 $font-size: 12px;
 $first-color: #00ff00;
 $second-color: #ff0000;
+
 .info {
     font-size: $font-size;
 }
+
 .success {
-    @extend .info;
     color: $first-color;
-}
-.warning {
     @extend .info;
+}
+
+.warning {
     color: $second-color;
+    @extend .info;
 }
