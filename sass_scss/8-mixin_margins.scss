@@ -2,12 +2,20 @@
 $small-margin: 10px;
 $big-margin: 15px;
 
-@mixin body {
+@mixin body-mixin {
     margin-left: $small-margin;
     margin-right: $small-margin;
 }
 
-@mixin div {
+@mixin div-mixin {
     margin-left: $big-margin;
     margin-right: $big-margin;
+}
+
+body {
+    @include body-mixin;
+}
+
+div {
+    @include div-mixin;
 }
