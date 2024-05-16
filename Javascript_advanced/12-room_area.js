@@ -7,3 +7,5 @@ const roomDimensions = {
 };
 
 var boundGetArea = roomDimensions.getArea.bind(roomDimensions);
+
+console.log(boundGetArea());
