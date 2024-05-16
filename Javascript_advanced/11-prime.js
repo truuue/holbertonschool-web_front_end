@@ -12,7 +12,7 @@ function countPrimeNumbers() {
 const startTimer = performance.now();
 
 for (let exec = 0; exec < 100; exec++) {
-    setTimeout(countPrimeNumbers, 0);
+  setTimeout(countPrimeNumbers, 0);
 }
 
 const endTimer = performance.now();
