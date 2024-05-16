@@ -11,7 +11,7 @@ function countPrimeNumbers() {
 
 const startTimer = performance.now();
 
-for (let exec = 0; exec <= 100; exec++) {
+for (let exec = 0; exec < 100; exec++) {
   countPrimeNumbers();
 }
 
