@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fetch Tester</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            font-size: 35px;
+            margin: 10px 0;
+            color: #333333;
+        }
+
+        .script-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            background-color: white;
+            padding: 1.5rem;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 1.5rem;
+        }
+
+        .script-box {
+            margin: 10px 0;
+        }
+
+        #display-contents {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #DDDDDD;
+            background-color: #FAFAFA;
+            border-radius: 1.5rem;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="script-container">
+        <h1>Fetch Tester</h1>
+
+        <div id="display-contents" class="script-box">
+            <script src="./14-wikipedia.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
