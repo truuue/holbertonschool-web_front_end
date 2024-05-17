@@ -24,3 +24,5 @@ function queryWikipedia(callback) {
 queryWikipedia(function (extract) {
   createElement(extract);
 });
+
+// Pour tester cette fonction de fetch utilisez le fichier 14-index.html
