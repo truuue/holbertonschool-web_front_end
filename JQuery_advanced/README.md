@@ -1,6 +1,6 @@
 # jQuery advanced
 
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: center; align-items: center;">
     <img src="./images/Readme_picture.jpeg" alt="image" width="300px" height="auto">
 </div>
 
