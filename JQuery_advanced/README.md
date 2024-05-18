@@ -1,7 +1,7 @@
 # jQuery advanced
 
 <div style="display: flex; justify-content: center;">
-    <img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/68c5f95c4e32d808cd79.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240518%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240518T105010Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0df341c8d9cabbeed8532bf4925dbc1d7106ad5e61be92f1df766242cd5ffbf0" alt="image" width="300px" height="auto">
+    <img src="./images/Readme_picture.jpeg" alt="image" width="300px" height="auto">
 </div>
 
 ## Resources
