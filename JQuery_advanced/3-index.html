@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 1</title>
+
+    <!-- jQuery slim-min latest version import -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script type="application/javascript">
+        function createFamilyTree() {
+            var salva = "Salva";
+
+            $("body").append(
+                $("<table>").append(
+                    $("<thead>").append(
+                        $("<tr>").append(
+                            $("<th>").text("Firstname"),
+                            $("<th>").text("Lastname")
+                        )
+                    ),
+                    $("<tbody></tbody>").append(
+                        $("<tr>").append(
+                            $("<td>").text("Guillaume"),
+                            $("<td>").text(`${salva}`)
+                        ),
+                        $("<tr>").append(
+                            $("<td>").text("Paulette"),
+                            $("<td>").text(`${salva}`)
+                        ),
+                        $("<tr>").append(
+                            $("<td>").text("Antoine"),
+                            $("<td>").text(`${salva}`)
+                        )
+                    )
+                )
+            )
+        }
+        createFamilyTree();
+    </script>
+</body>
+
+</html>
