@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 6</title>
+
+    <!-- jQuery slim-min latest version import -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script type="application/javascript">
+
+        function createSearchForm() {
+            $("body").append(
+                $("<input>").attr("type", "text"),
+                $("<input>").attr("type", "submit").click(
+                    function () {
+                        queryWikipedia($("input:nth-of-type(1)").val());
+                    }
+                ),
+                $("<ul>")
+            )
+        }
+
+        function addNewArticle(id, title, snippet) {
+            $("ul").append(
+                $("<li>").append(
+                    $("<p>").append(
+                        $("<span>").text(`${id} - `).append($("<b>").text(title))
+                    ),
+                    $("<p>").html(snippet)
+                )
+            )
+        }
+
+        function queryWikipedia(search) {
+            $.ajax({
+                url: "https://en.wikipedia.org/w/api.php?origin=*",
+                data: {
+                    action: "query",
+                    format: "json",
+                    list: "search",
+                    srsearch: search,
+                },
+                success: function (response) {
+                    response.query.search.forEach(function (result) {
+                        addNewArticle(result.pageid, result.title, result.snippet);
+                    });
+                },
+                error: function () {
+                    console.log("Error while quyrering wikipedia API");
+                }
+            });
+        }
+
+        createSearchForm();
+
+    </script>
+</body>
+
+</html>
