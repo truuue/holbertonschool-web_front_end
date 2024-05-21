@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 10</title>
+
+    <!-- jQuery slim-min latest version import -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script type="application/javascript">
+
+        function addPostRow(data) {
+            $("body").append(
+                $("<p>").append(
+                    $("<span>").text("Post created with id " + data.id + ", title: " + data.title + ", author: " + data.author)
+                )
+            );
+        }
+
+        function listPosts() {
+            $.ajax({
+                url: "http://localhost:3000/posts",
+                method: "GET",
+                success: function(response) {
+                    response.forEach(function(post) {
+                        addPostRow(post);
+                    });
+                },
+                error: function() {
+                    alert("Server Error");
+                }
+            });
+        }
+
+        listPosts();
+
+    </script>
+</body>
+
+</html>
