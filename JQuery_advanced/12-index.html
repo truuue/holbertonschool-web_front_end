@@ -88,10 +88,10 @@
 
         function deletePost(id) {
             $.ajax({
-                url: "http://localhost:3000/posts/" + id,
+                url: `http://localhost:3000/posts/${id}`,
                 method: "DELETE",
                 success: function () {
-                    $("#row- " + id).remove();
+                    $(`#row-${id}`).remove();
                 },
                 error: function () {
                     alert("Post was not deleted");
