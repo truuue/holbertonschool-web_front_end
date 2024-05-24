@@ -11,7 +11,7 @@ function outer() {
     var exclamation = "!";
 
     function inception() {
-      alert(globalVariable + " " + course + " " + exclamation);
+      alert(globalVariable + " " + course + exclamation);
     }
 
     inception();
