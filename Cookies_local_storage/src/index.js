@@ -4,11 +4,14 @@ function setCookies() {
   // Récupère la valeur du champ "email"
   const emailValue = document.getElementById("email").value;
 
-  // Définit un cookie avec le nom "firstname" et la valeur correspondante
-  document.cookie = `firstname=${firstnameValue}; path=/`;
+  // Crée une nouvelle date en ajoutant 10 jours à la date actuelle
+  const expirationDate = new Date();
+  expirationDate.setTime(expirationDate.getTime() + 600000);
 
-  // Définit un cookie avec le nom "email" et la valeur correspondante
-  document.cookie = `email=${emailValue}; path=/`;
+  // Définit un cookie avec le nom "firstname", la valeur correspondante et la date d'expiration
+  document.cookie = `firstname=${firstnameValue}; expires=${expirationDate.toUTCString()}; path=/`;
+  // Définit un cookie avec le nom "email", la valeur correspondante et la date d'expiration
+  document.cookie = `email=${emailValue}; expires=${expirationDate.toUTCString()}; path=/`;
 }
 
 function showCookies() {
@@ -19,7 +22,6 @@ function showCookies() {
 
   // Définit le contenu du paragraphe avec les cookies
   paragraph.innerHTML = `Cookies: ${cookies}`;
-
   // Ajoute le paragraphe au corps du document
   document.body.appendChild(paragraph);
 }
