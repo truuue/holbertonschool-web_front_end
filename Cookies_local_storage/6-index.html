@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Session storage</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
+    <script>
+        const availableItems = [
+            "Shampoo",
+            "Soap",
+            "Sponge",
+            "Water"
+        ];
+
+        function addItemToCart(item) {
+            if (sessionStorage) {
+                sessionStorage.setItem(item, true);
+            } else {
+                console.error("Session storage not supported");
+            }
+        }
+
+        function createStore() {
+            const ul = document.createElement("ul");
+            document.body.append(ul);
+
+            availableItems.forEach(function (item) {
+                const li = document.createElement("li");
+                li.textContent = item;
+                li.addEventListener("click", function () {
+                    addItemToCart(item);
+                });
+                ul.append(li);
+            });
+        }
+
+        function displayCart() {
+            if (sessionStorage.length === 0) {
+                return;
+            }
+
+            const paragraph = document.createElement("p");
+            paragraph.textContent = `You previously had ${sessionStorage.length} items in your cart`;
+            document.body.append(paragraph);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("DOM fully loaded and parsed");
+
+            if (!sessionStorage) {
+                alert("Sorry, your browser does not support Web storage. Try again with a better one");
+            } else {
+                const user = {};
+                createStore();
+                displayCart();
+            }
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
